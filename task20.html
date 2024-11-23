@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><center><div id="mydiv"><br>
+    <form id="form1" onsubmit="evaluation(event)">
+       
+        <center> <input id="ip1" type="text">
+       <br><br>
+       <input type="button" value="1" onclick="input(event)">
+        <input type="button" value="2" onclick="input(event)">
+        <input type="button" value="3" onclick="input(event)">
+        <input type="button" value="+" onclick="input(event)">
+        <input type="button" value="-" onclick="input(event)"><br><br>
+        <input type="button" value="4" onclick="input(event)">
+        <input type="button" value="5" onclick="input(event)">
+        <input type="button" value="6" onclick="input(event)">
+        <input type="button" value="*" onclick="input(event)">
+        <input type="button" value="/" onclick="input(event)"><br><br>
+        <input type="button" value="7" onclick="input(event)">
+        <input type="button" value="8" onclick="input(event)">
+        <input type="button" value="9" onclick="input(event)">
+        <input type="button" value="0" onclick="input(event)">
+        <input type="button" value="%" onclick="input(event)"><br><br>
+      <input id="sub" type="submit"></center>
+        <p id="op"></p>
+
+    </form></div></center>
+    <script>
+        let form1=document.getElementById("form1")
+        form1.style.position="relative"
+        
+        let display=document.getElementById("ip1")
+        ip1.style.borderRadius="5px"
+        let mydiv=document.getElementById("mydiv")
+        mydiv.style.border="2px solid black"
+        mydiv.style.width="180px"
+        mydiv.style.borderRadius="20px"
+        mydiv.style.backgroundColor="#454545"
+        let op=document.getElementById("op")
+        let sub=document.getElementById("sub")
+        sub.style.borderRadius="20px"
+
+        function input(event){
+            display.value+=event.target.value;
+        }
+        function evaluation(event){
+            event.preventDefault();
+            let res=eval(display.value);
+            display.value=res;
+        }
+
+    </script>
+</body>
+</html>
